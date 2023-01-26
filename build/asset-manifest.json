@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/home/hkusano/public_html/study/cw/static/css/main.fb7b2719.css",
-    "main.js": "/home/hkusano/public_html/study/cw/static/js/main.be74fef8.js",
-    "index.html": "/home/hkusano/public_html/study/cw/index.html",
-    "main.fb7b2719.css.map": "/home/hkusano/public_html/study/cw/static/css/main.fb7b2719.css.map",
-    "main.be74fef8.js.map": "/home/hkusano/public_html/study/cw/static/js/main.be74fef8.js.map"
+    "main.css": "/https://machitan.vercel.app/static/css/main.fb7b2719.css",
+    "main.js": "/https://machitan.vercel.app/static/js/main.be74fef8.js",
+    "index.html": "/https://machitan.vercel.app/index.html",
+    "main.fb7b2719.css.map": "/https://machitan.vercel.app/static/css/main.fb7b2719.css.map",
+    "main.be74fef8.js.map": "/https://machitan.vercel.app/static/js/main.be74fef8.js.map"
   },
   "entrypoints": [
     "static/css/main.fb7b2719.css",
