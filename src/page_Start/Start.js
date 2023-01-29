@@ -10,7 +10,7 @@ export const Start = () => {
       </figure> */}
       <h1>まちたん</h1>
       <div className='startBtn'>
-        <Link to="/account">始める</Link>
+        <Link to="/creatAccount">始める</Link>
       </div>
     </div>
   )
