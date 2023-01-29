@@ -3,7 +3,6 @@ import "./QR.scss"
 
 import { useState } from "react";
 import { useZxing } from "react-zxing";
-import { Link } from 'react-router-dom';
 
 export const QR = () => {
     const [result, setResult] = useState("");
@@ -16,7 +15,7 @@ export const QR = () => {
   return (
     <div>
         <video id='camera' ref={ref} />
-        <p><Link>{result}</Link></p>
+        <p><img src={`${process.env.PUBLIC_URL}/img/${result}`} /></p>
     </div>
   )
 }
