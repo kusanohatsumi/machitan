@@ -15,7 +15,7 @@ export const QR = () => {
   return (
     <div>
         <video id='camera' ref={ref} />
-        <p><img src={`${process.env.PUBLIC_URL}/img/${result}`} /></p>
+        <img src={`${process.env.PUBLIC_URL}/img/${result}`} />
     </div>
   )
 }
