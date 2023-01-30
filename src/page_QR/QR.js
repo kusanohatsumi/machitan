@@ -24,7 +24,7 @@ export const QR = () => {
 
         // --- モーダル ---
     // const { Modal, openModal, closeModal } = useModal();
-    const [isOpen,setIsOpen] = useState("aaa");
+    const [isOpen,setIsOpen] = useState("");
     const onClickToggle = () => {
         setIsOpen(!isOpen);
     };
