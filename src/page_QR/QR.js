@@ -18,6 +18,9 @@ export const QR = () => {
     // --- モーダル ---
     // const { Modal, openModal, closeModal } = useModal();
     const [show,setShow] = useState(false);
+    const onClickToggle = () => {
+        setShow(!show);
+    };
 
 
 
@@ -32,18 +35,19 @@ export const QR = () => {
 
   return (
     <div>
-        <video id='camera' ref={ref} />
         <img src={`${process.env.PUBLIC_URL}/img/${result}`} />
         {/* <Modal>
             <h2>Content from children</h2>
             <video id='camera' ref={ref} />
-            <button onClick={closeModal}>Close</button>
         </Modal> */}
+        <button onClick={onClickToggle}>open</button>
         <ReactModal 
             isOpen={show}
             onRequestClose={()=>setShow(false)}
             setResult={setResult}
-        />
+        >
+        <video id='camera' ref={ref} />
+        </ReactModal>
     </div>
 
   )
