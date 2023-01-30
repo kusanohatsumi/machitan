@@ -15,39 +15,58 @@ export const QR = () => {
         },
     });
 
-    // --- モーダル ---
+
+
+
+
+
+
+
+        // --- モーダル ---
     // const { Modal, openModal, closeModal } = useModal();
-    const [show,setShow] = useState(false);
+    const [isOpen,setIsOpen] = useState(false);
     const onClickToggle = () => {
-        setShow(!show);
+        setIsOpen(!isOpen);
     };
 
 
 
 
-    if (result == "") {
-        console.log("null");
-        console.log(result);
-    }else{
-        console.log("full");
-        console.log(result);
-    }
+
 
   return (
     <div>
         <img src={`${process.env.PUBLIC_URL}/img/${result}`} />
+        {/* <video id='camera' ref={ref} /> */}
         {/* <Modal>
             <h2>Content from children</h2>
-            <video id='camera' ref={ref} />
         </Modal> */}
         <button onClick={onClickToggle}>open</button>
-        <ReactModal 
-            isOpen={show}
-            onRequestClose={()=>setShow(false)}
-            setResult={setResult}
-        >
         <video id='camera' ref={ref} />
-        </ReactModal>
+
+        {isOpen ? 
+            <div>
+                <p>保存されています</p>
+                <div className='stamp'>
+                    スタンプ台紙
+                </div>
+            </div>
+            :
+            <p>
+                保存されていません
+
+                </p>
+
+        }
+            <ReactModal 
+                isOpen={isOpen}
+                onRequestClose={()=>setIsOpen(false)}
+                setResult={setResult}
+            >
+                <p>text</p>
+            </ReactModal>
+
+
     </div>
 
   )
