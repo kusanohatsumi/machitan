@@ -41,7 +41,7 @@ export const QR = () => {
         {/* <Modal>
             <h2>Content from children</h2>
         </Modal> */}
-        <button onClick={onClickToggle}>open</button>
+        {/* <button onClick={onClickToggle}>open</button> */}
         <video id='camera' ref={ref} />
 
         {isOpen ? 
@@ -54,9 +54,7 @@ export const QR = () => {
             :
             <p>
                 保存されていません
-
-                </p>
-
+            </p>
         }
             {/* <ReactModal 
                 isOpen={isOpen}
