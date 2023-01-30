@@ -24,7 +24,7 @@ export const QR = () => {
 
         // --- モーダル ---
     // const { Modal, openModal, closeModal } = useModal();
-    const [isOpen,setIsOpen] = useState(false);
+    const [isOpen,setIsOpen] = useState("aaa");
     const onClickToggle = () => {
         setIsOpen(!isOpen);
     };
@@ -58,13 +58,13 @@ export const QR = () => {
                 </p>
 
         }
-            <ReactModal 
+            {/* <ReactModal 
                 isOpen={isOpen}
                 onRequestClose={()=>setIsOpen(false)}
                 setResult={setResult}
             >
                 <p>text</p>
-            </ReactModal>
+            </ReactModal> */}
 
 
     </div>
