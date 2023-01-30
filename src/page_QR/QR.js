@@ -36,15 +36,14 @@ export const QR = () => {
 
   return (
     <div>
-        <img src={`${process.env.PUBLIC_URL}/img/${result}`} />
+        {/* <img src={`${process.env.PUBLIC_URL}/img/${result}`} /> */}
         {/* <video id='camera' ref={ref} /> */}
         {/* <Modal>
             <h2>Content from children</h2>
         </Modal> */}
         {/* <button onClick={onClickToggle}>open</button> */}
         <video id='camera' ref={ref} />
-
-        {isOpen ? 
+        {result ? 
             <div>
                 <p>保存されています</p>
                 <div className='stamp'>
