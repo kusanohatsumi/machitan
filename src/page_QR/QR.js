@@ -21,14 +21,17 @@ export const QR = () => {
 
     // --- toggle ---
     const [active, setActive] = useState(false);
+    const [resultImg, setResultImg] = useState("");
     const classToggle = () =>{
         setActive(!active);
+        setResultImg(result);
         setDoc(doc(db,"myStamp", user.uid),result);
 
     }
 
     // --- データ保存 ---
     const [user] = useAuthState(auth); 
+
 
 
 
@@ -48,8 +51,8 @@ export const QR = () => {
             <div>
                 <div className='stampMat'>
                     <p className='tapInfo'>ここをタップ↓</p>
-                    <div className='stamp'>
-                        <img src={`${process.env.PUBLIC_URL}/img/${result}`} />
+                    <div className='stamp' onClick={classToggle}>
+                        <img src={`${process.env.PUBLIC_URL}/img/${resultImg}`} />
                         {/* <span className={
                             active ? "get"
                             :
