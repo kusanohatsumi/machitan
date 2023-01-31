@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./QR.scss"
 
 import { useState } from "react";
 import { useZxing } from "react-zxing";
 import { Header } from '../CommonCompornents/Header';
 
+import { db, auth } from '../CommonCompornents/Firebase';
+import {useAuthState} from "react-firebase-hooks/auth";
+import { doc, setDoc } from 'firebase/firestore';
+
+
 export const QR = () => {
     // --- QRコードリーダー ---
-    const [result, setResult] = useState("");
+    const [result, setResult] = useState("aaa");
     const { ref } = useZxing({
         onResult(result) {
             setResult(result.getText());
@@ -18,9 +23,12 @@ export const QR = () => {
     const [active, setActive] = useState(false);
     const classToggle = () =>{
         setActive(!active);
+        setDoc(doc(db,"myStamp", user.uid),result);
+
     }
 
-
+    // --- データ保存 ---
+    const [user] = useAuthState(auth); 
 
 
 
@@ -41,13 +49,16 @@ export const QR = () => {
                 <div className='stampMat'>
                     <p className='tapInfo'>ここをタップ↓</p>
                     <div className='stamp'>
-                        <span className={
+                        <img src={`${process.env.PUBLIC_URL}/img/${result}`} />
+                        {/* <span className={
                             active ? "get"
                             :
                             null
                         }
                         onClick={classToggle}
-                        ></span>
+                        > */}
+
+                        {/* </span> */}
                     </div>
                 </div>
             </div>
