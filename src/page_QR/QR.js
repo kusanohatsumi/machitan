@@ -12,7 +12,7 @@ import { doc, setDoc } from 'firebase/firestore';
 
 export const QR = () => {
     // --- QRコードリーダー ---
-    const [result, setResult] = useState("aaa");
+    const [result, setResult] = useState("");
     const { ref } = useZxing({
         onResult(result) {
             setResult(result.getText());
