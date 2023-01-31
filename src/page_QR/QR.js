@@ -21,13 +21,12 @@ export const QR = () => {
 
 
 
-
         // --- モーダル ---
     // const { Modal, openModal, closeModal } = useModal();
-    const [isOpen,setIsOpen] = useState("");
-    const onClickToggle = () => {
-        setIsOpen(!isOpen);
-    };
+    // const [isOpen,setIsOpen] = useState("");
+    // const onClickToggle = () => {
+    //     setIsOpen(!isOpen);
+    // };
 
 
 
@@ -36,7 +35,6 @@ export const QR = () => {
 
   return (
     <div>
-        {/* <img src={`${process.env.PUBLIC_URL}/img/${result}`} /> */}
         {/* <video id='camera' ref={ref} /> */}
         {/* <Modal>
             <h2>Content from children</h2>
@@ -46,14 +44,15 @@ export const QR = () => {
         {result ? 
             <div>
                 <p>保存されています</p>
-                <div className='stamp'>
-                    スタンプ台紙
+                <div className='stampMat'>
+                    <p>スタンプ台紙</p>
+                    <div className='stamp'>
+                        <span></span>
+                    </div>
                 </div>
             </div>
             :
-            <p>
-                保存されていません
-            </p>
+            null
         }
             {/* <ReactModal 
                 isOpen={isOpen}

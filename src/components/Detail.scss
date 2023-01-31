@@ -9,7 +9,6 @@
     z-index: 999;
     bottom: 0;
     background-color: #fff;
-    padding:0 16px;
     border-radius: 20px 20px 0 0;
     box-shadow: 0 -3px 10px rgba(0,0,0,0.25);
     .handle{
@@ -28,7 +27,7 @@
         height: 90%;
         overflow: scroll;
         li{
-            width:93%;
+            width:87%;
             height: 200px;
             margin: 20px auto;
             box-shadow: 0 0 5px #D9D9D9;
