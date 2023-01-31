@@ -5,10 +5,9 @@ import './Start.scss';
 export const Start = () => {
   return (
     <div className='startApp'>
-      {/* <figure>
+      <figure className='logo'>
         <img alt="まちたん" src={`${process.env.PUBLIC_URL}/img/Logo.svg`}/>
-      </figure> */}
-      <h1>まちたん</h1>
+      </figure>
       <div className='startBtn'>
         <Link to="/checking">始める</Link>
       </div>
