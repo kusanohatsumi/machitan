@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./QR.scss"
 
 import { useState } from "react";
 import { useZxing } from "react-zxing";
-import useModal from './useModal';
-import ReactModal from 'react-modal';
+import { Header } from '../CommonCompornents/Header';
 
 export const QR = () => {
     // --- QRコードリーダー ---
@@ -15,19 +14,11 @@ export const QR = () => {
         },
     });
 
-
-
-
-
-
-
-        // --- モーダル ---
-    // const { Modal, openModal, closeModal } = useModal();
-    // const [isOpen,setIsOpen] = useState("");
-    // const onClickToggle = () => {
-    //     setIsOpen(!isOpen);
-    // };
-
+    // --- toggle ---
+    const [active, setActive] = useState(false);
+    const classToggle = () =>{
+        setActive(!active);
+    }
 
 
 
@@ -35,33 +26,34 @@ export const QR = () => {
 
   return (
     <div>
-        {/* <video id='camera' ref={ref} /> */}
-        {/* <Modal>
-            <h2>Content from children</h2>
-        </Modal> */}
-        {/* <button onClick={onClickToggle}>open</button> */}
+        <div id='label' className='label label--QR'>
+        {result ? 
+            <p>スタンプGET</p>
+            :
+            <p>QRを読み込む</p>
+        }
+        </div>
+        <Header />
+
         <video id='camera' ref={ref} />
         {result ? 
             <div>
-                <p>保存されています</p>
                 <div className='stampMat'>
-                    <p>スタンプ台紙</p>
+                    <p className='tapInfo'>ここをタップ↓</p>
                     <div className='stamp'>
-                        <span></span>
+                        <span className={
+                            active ? "get"
+                            :
+                            null
+                        }
+                        onClick={classToggle}
+                        ></span>
                     </div>
                 </div>
             </div>
             :
             null
         }
-            {/* <ReactModal 
-                isOpen={isOpen}
-                onRequestClose={()=>setIsOpen(false)}
-                setResult={setResult}
-            >
-                <p>text</p>
-            </ReactModal> */}
-
 
     </div>
 

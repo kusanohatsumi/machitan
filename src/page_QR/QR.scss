@@ -5,7 +5,6 @@
 #camera{
     width:100%;
     height: 100vh;
-    border: solid 2px skyblue;
 }
 
 
@@ -16,20 +15,24 @@
 .stampMat{
     width:100%;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: #DFEFED;
     position: fixed;
     top:0;
+    z-index: 888;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    .tapInfo{
+        margin: 8px 0;
+    }
     .stamp{
         width:300px;
         height: 300px;
         margin: 0 auto;
         border-radius: 50%;
-        border:solid 2px skyblue;
+        background-color: #fff;
 
         display: flex;
         align-items: center;
@@ -38,9 +41,28 @@
         span{
             width:80%;
             height: 80%;
+            transition: .2s ease;
+            opacity: 0;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            line-height: 120px;
+        }
+        .get{
             border-radius: 50%;
             display: block;
-            background-color: slateblue;
+            background-color: #6AC1B7;
+            opacity: 1;
         }
     }
 }
+
+
+.label--QR{
+    position: fixed;
+    top:0;
+    z-index: 999;
+}
+
+
+

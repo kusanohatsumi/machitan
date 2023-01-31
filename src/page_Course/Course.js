@@ -7,19 +7,27 @@ export const Course = () => {
     <div className='course'>
       <div className='course__item'>
         <Link to="/main">
-          コース
+          旅館コース
         </Link>
       </div>
 
       <div className='course__item'>
-        コース
+        <Link to="/main">
+          かやぶきコース
+        </Link>
       </div>
       <div className='course__item'>
-        コース
+        <Link to="/main">
+          キャンプ場コース
+        </Link>
       </div>
       <div className='course__item'>
-        コース
+        <Link to="/main">
+          グランピングコース
+        </Link>
       </div>
+
+
 
 
     </div>

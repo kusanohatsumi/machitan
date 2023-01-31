@@ -9,6 +9,7 @@ import { NewAccount } from '../page_Account/NewAccount';
 import { Login } from '../page_Account/Login';
 import { QR } from '../page_QR/QR';
 import { Checking } from '../checking/Checking';
+import { Log } from '../page_Log/Log';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/QR' element={<QR />} />
           {/* --- 外部ページ --- */}
           <Route path='/stampMat' element={<Main />} />
+          <Route path='/log' element={<Log />} />
           {/* --- 管理 --- */}
           <Route path='/checking' element={<Checking />} />
         </Routes>

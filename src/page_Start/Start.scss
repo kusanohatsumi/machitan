@@ -4,6 +4,7 @@
 .startApp{
     font-size: 1.2rem;
     height:100vh;
+    background-color: #fff;
     // outline: solid 2px skyblue;
     margin: 0 auto;
     display: flex;
@@ -16,11 +17,12 @@
 }
 
 .startBtn{
-    width:150px;
+    width:200px;
     height:40px;
     line-height: 40px;
-    background-color: #fff;
-    box-shadow: 0px 3px 5px #999;
+    background-color: #517D99;
+    // box-shadow: 0px 3px 5px #999;
+    border-radius: 25px;
 
     display: flex;
     align-items: center;
@@ -31,7 +33,7 @@
         height:100%;
         text-align: center;
         text-decoration: none;
-        color:#333;
+        color:#fff;
     }
 }
 

@@ -1,24 +1,42 @@
-import React from 'react'
+import React,{ useRef, useState }  from 'react'
 import "./Main.scss";
+import "./Detail.scss"
 import { Header } from "../CommonCompornents/Header";
 import { Map } from '../components/Map';
-import { Detail } from '../components/Detail';
 import { Link } from 'react-router-dom';
 
+
 export const Main = () => {
+    //   const element = `
+  //   <li>コンテンツ１</li>
+  //   <li>コンテンツ２</li>
+  //   <li>コンテンツ３</li>
+  //   <li>コンテンツ４</li>
+  //   <li>コンテンツ５</li>
+  //   <li>コンテンツ６</li>
+  // `;
+
   return (
-    <div>
-        <Header />
-        <div id='label' className='label'>
-        <Link to="/course">
-          <figure>
-            <img src={`${process.env.PUBLIC_URL}/img/arrow.svg`} alt='戻る'/>
-          </figure>
-          </Link>
-          <p>コース</p>
+    
+    <>
+      <Header />
+      {/* --- メイン --- */}
+      
+      <Map />
+      <div className='detail'>
+        <div className='handle'>
+          <span></span>
         </div>
-        <Map />
-        <Detail />
+        <ul>
+          {/* --- 詳細コンテンツを追加する --- */}
+          {/* <li>コンテンツ１</li>
+          <li>コンテンツ２</li>
+          <li>コンテンツ３</li>
+          <li>コンテンツ４</li>
+          <li>コンテンツ５</li>
+          <li>コンテンツ６</li> */}
+        </ul>
     </div>
+    </>
   )
 }

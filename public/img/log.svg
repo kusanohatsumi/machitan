@@ -1,3 +1,11 @@
-<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556V12.4444C0 13.3 0.7 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0ZM3.11111 3.11111H4.66667V4.66667H3.11111V3.11111ZM3.11111 6.22222H4.66667V7.77778H3.11111V6.22222ZM3.11111 9.33333H4.66667V10.8889H3.11111V9.33333ZM10.8889 10.8889H6.22222V9.33333H10.8889V10.8889ZM10.8889 7.77778H6.22222V6.22222H10.8889V7.77778ZM10.8889 4.66667H6.22222V3.11111H10.8889V4.66667Z" fill="black"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M12.4,0H1.6C0.7,0,0,0.7,0,1.6v10.9C0,13.3,0.7,14,1.6,14h10.9c0.9,0,1.6-0.7,1.6-1.6V1.6C14,0.7,13.3,0,12.4,0
+	z M3.1,3.1h1.6v1.6H3.1V3.1z M3.1,6.2h1.6v1.6H3.1V6.2z M3.1,9.3h1.6v1.6H3.1V9.3z M10.9,10.9H6.2V9.3h4.7V10.9z M10.9,7.8H6.2V6.2
+	h4.7V7.8z M10.9,4.7H6.2V3.1h4.7V4.7z"/>
 </svg>

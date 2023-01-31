@@ -1,18 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./Account.scss";
 
 import { Link } from 'react-router-dom';
 import { auth, provider } from '../CommonCompornents/Firebase';
 import { signInWithPopup, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 
 export const NewAccount = () => {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
-
-    const [user] = useAuthState(auth)
-
     
     const handleSubmit = async(e)=>{
         e.preventDefault();
