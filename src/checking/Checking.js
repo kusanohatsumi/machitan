@@ -2,17 +2,17 @@ import React from 'react'
 import { auth } from '../CommonCompornents/Firebase'
 import {useAuthState} from "react-firebase-hooks/auth";
 import { Course } from '../page_Course/Course';
-import { Login } from '../page_Account/Login';
+import { NewAccount } from '../page_Account/NewAccount';
 
 export const Checking = () => {
     const [user] = useAuthState(auth); 
   return (
     <>
-        {user ?
-            <Course />
-            :
-            <Login />
-        }
+      {user ?
+        <Course />
+        :
+        <NewAccount />
+      }
     </>
   )
 }

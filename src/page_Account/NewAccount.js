@@ -1,26 +1,19 @@
-import React from 'react'
-import "./NewAccount.scss";
+import React, { useEffect } from 'react'
+import "./Account.scss";
 
 import { Link } from 'react-router-dom';
 import { auth, provider } from '../CommonCompornents/Firebase';
-import { signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
-
-
+import { signInWithPopup, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useState } from 'react';
-
-
-
-
-
-
-
-
-
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 export const NewAccount = () => {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
+    const [user] = useAuthState(auth)
+
+    
     const handleSubmit = async(e)=>{
         e.preventDefault();
         try{
@@ -52,9 +45,7 @@ export const NewAccount = () => {
                 />
             </div>
             <div className='creatItem'>
-                <button type='submit'>
-                    <Link to="/course">新規登録</Link>
-                </button>
+                <button type='submit'>新規登録</button>
             </div>
 
             <div className='or'>
@@ -64,11 +55,11 @@ export const NewAccount = () => {
 
 
             <p className='login'>
-                <Link to="/login">すでにお持ちの方はこちら</Link>
+                <Link to="/login">すでにアカウントをお持ちの方はこちら</Link>
             </p>
         </form>
     </div>
-)
+    )
 }
 
 
