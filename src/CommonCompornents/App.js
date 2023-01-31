@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NewAccount } from '../page_Account/NewAccount';
 import { Login } from '../page_Account/Login';
 import { QR } from '../page_QR/QR';
-import { Mat } from '../page_Mat/Mat';
+import { Checking } from '../checking/Checking';
 
 
 
@@ -28,10 +28,10 @@ function App() {
           <Route path='/course' element={<Course />}/>
           {/* --- 機能 --- */}
           <Route path='/QR' element={<QR />} />
-
-
           {/* --- 外部ページ --- */}
-          <Route path='/stampMat' element={<Mat />} />
+          <Route path='/stampMat' element={<Main />} />
+          {/* --- 管理 --- */}
+          <Route path='/checking' element={<Checking />} />
         </Routes>
       </div>
     </Router>

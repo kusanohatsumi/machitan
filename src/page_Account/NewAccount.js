@@ -3,7 +3,8 @@ import "./NewAccount.scss";
 
 import { Link } from 'react-router-dom';
 import { auth, provider } from '../CommonCompornents/Firebase';
-import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
+
 
 import { useState } from 'react';
 
@@ -20,10 +21,10 @@ export const NewAccount = () => {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
-    async function handleSubmit(e){
+    const handleSubmit = async(e)=>{
         e.preventDefault();
         try{
-            await signInWithEmailAndPassword(
+            await createUserWithEmailAndPassword(
                 auth, email, password
             );
         }
@@ -37,21 +38,23 @@ export const NewAccount = () => {
         <h2 className='creatAccount'>新規登録</h2>
         <form onSubmit={handleSubmit}>
             <div className='creatItem'>
-                <label>メールアドレス</label>
+                <label htmlFor='email'>メールアドレス</label>
                 <input 
-                    type="email" placeholder='メールアドレスを入力してください'
-                    onChange={(e)=>setEmail(e.target.value)}
+                    value={email} type='email' name='email' placeholder='メールアドレスを入力してください'
+                    onChange={(event)=>setEmail(event.target.value)}
                     />
             </div>
             <div className='creatItem'>
-                <label>パスワード</label>
+                <label htmlFor='password'>パスワード</label>
                 <input 
-                    type="password" placeholder='パスワードを入力してください'
-                    onChange={(e)=>setPassword(e.target.value)}
+                    value={password} type='password' name='password' placeholder='パスワードを入力してください'
+                    onChange={(event)=>setPassword(event.target.value)}
                 />
             </div>
             <div className='creatItem'>
-                <button type='submit'><Link to="/course">新規登録</Link></button>
+                <button type='submit'>
+                    <Link to="/course">新規登録</Link>
+                </button>
             </div>
 
             <div className='or'>

@@ -27,21 +27,21 @@ export const Login = () => {
         <h2 className='creatAccount'>ログイン</h2>
         <form onSubmit={handleSubmit}>
             <div className='creatItem'>
-                <label>メールアドレス</label>
+                <label htmlFor='email'>メールアドレス</label>
                 <input 
-                    type="email" placeholder='メールアドレスを入力してください'
+                    value={email} type="email" name='email' placeholder='メールアドレスを入力してください'
                     onChange={(e)=>setEmail(e.target.value)}
-                    />
+                />
             </div>
             <div className='creatItem'>
-                <label>パスワード</label>
+                <label htmlFor='password'>パスワード</label>
                 <input 
-                    type="password" placeholder='パスワードを入力してください'
+                    value={password} type="password" name='password' placeholder='パスワードを入力してください'
                     onChange={(e)=>setPassword(e.target.value)}
                 />
             </div>
             <div className='creatItem'>
-                <button type='submit'><Link>ログイン</Link></button>
+                <button type='submit'><Link to="/course">ログイン</Link></button>
             </div>
 
             <div className='or'>
