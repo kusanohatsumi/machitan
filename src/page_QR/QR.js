@@ -12,7 +12,7 @@ import { doc, setDoc } from 'firebase/firestore';
 
 export const QR = () => {
     // --- QRコードリーダー ---
-    const [result, setResult] = useState("");
+    const [result, setResult] = useState("Logo.svg");
     const { ref } = useZxing({
         onResult(result) {
             setResult(result.getText());
